@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+    *{
+        background-color: black;
+        color: white;
+        margin: 0;
+        outline: none;
+        font-family: 'Source Code Pro', monospace;
+    }
+    
+
+    #main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    table, th, td {
+  border: 1px solid rgb(152, 152, 152);
+  border-collapse: collapse;
+}
+</style>
+<body>
+    <table>
+        <tbody>
+            {% for file in files %}
+                <tr>
+                    <td>{{file}}</td>
+                    <td>
+                        <form action="" method="POST">
+                            <input style="display:none;" type="text" name="filename" value="{{file}}">
+                            <input type="submit" value="⬇">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

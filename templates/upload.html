@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+</head>
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+
+    *{
+        background-color: black;
+        color: white;
+        margin: 0;
+        outline: none;
+        font-family: 'Source Code Pro', monospace;
+    }
+    body{
+        width: calc(100vw - calc(100vw - 100%));
+        height: 100vh;
+        position: relative;
+    }
+
+    #main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<body>
+    <div id="main">
+        <a href="/download">⬇</a>
+        {% if message %}
+            <p>{{message}}</p>
+        {% endif %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="" required>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
